@@ -2,15 +2,18 @@
 // на вход принимает число N
 // и на выходе выдает, все четные числа от 1 до N
 
-Console.WriteLine("Введите число: ");
+Console.WriteLine("Введите число больше 0: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int index = 1;
-
-while (index <= number)
+if (number >= 1)
 {
-    if (index % 2 == 0)
+    while (index <= number)
     {
-        Console.Write($"{index} ");
+        if (index % 2 == 0)
+        {
+            Console.Write($"{index} ");
+        }
+        index++;
     }
-    index++;
 }
+else Console.WriteLine("Вы ввели неверное число");
