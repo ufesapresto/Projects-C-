@@ -31,21 +31,20 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-//метод замены чисел в массиве на их квадраты
+// расчет суммы
 int SummIndex(int[,] matrix)
 {
     int summ = 0;
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    int size = matrix.GetLength(0);
+    if (size > matrix.GetLength(1)) size = matrix.GetLength(1); 
+    for (int i = 0; i < size; i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
-        {
-            if (i == j) summ = summ + matrix[i,j];
+     summ += matrix[i,i];
         }
-    }    
     return summ;
 }
 
-int[,] array2d = CreateNewMatrix(5, 5, -9, 9);
+int[,] array2d = CreateNewMatrix(3, 4, -9, 9);
 PrintMatrix(array2d);
 Console.WriteLine();
 int result = SummIndex(array2d);
