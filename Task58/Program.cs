@@ -51,6 +51,7 @@ int[,] MultiplicationMatrix(int[,] matrix1, int[,] matrix2)
     }
     return multMatrix;
 }
+//тело программы
 int[,] array2d = CreateNewMatrix(2, 2, 0, 9);
 PrintMatrix(array2d);
 Console.WriteLine();
@@ -63,4 +64,4 @@ if (array2d.GetLength(0) == matrix2d.GetLength(1))
     int[,] resultMatrix = MultiplicationMatrix(array2d, matrix2d);
     PrintMatrix(resultMatrix);
 }
-else Console.WriteLine("Перемножить данные матрицы не возможно");
+else Console.WriteLine("Перемножить данные матрицы невозможно");
